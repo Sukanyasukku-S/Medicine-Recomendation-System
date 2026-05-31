@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Medicine Recommendation System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <h2>MediBot</h2>
+    <ul>
+        <li>Home</li>
+        <li>Predict</li>
+        <li>About</li>
+        <li>Contact</li>
+    </ul>
+</nav>
+
+<section class="hero">
+    <h1>Medicine Recommendation System</h1>
+    <p>
+Get disease prediction, medication guidance,
+diet recommendations and health precautions.
+</p>
+
+    <div class="search-box">
+        <textarea id="symptomsInput" placeholder="Example: fever, cough, cold, headache"></textarea>
+        <button onclick="predictDisease()">Predict</button>
+    </div>
+</section>
+
+<section id="resultSection" class="result-section hidden">
+    <h2>Prediction Result</h2>
+
+    <div class="cards">
+        <div class="card disease">
+            <h3>Disease</h3>
+            <p id="disease"></p>
+            <span id="confidence"></span>
+        </div>
+
+        <div class="card">
+            <h3>Description</h3>
+            <p id="description"></p>
+        </div>
+
+        <div class="card">
+            <h3>Precautions</h3>
+            <p id="precaution"></p>
+        </div>
+
+        <div class="card">
+            <h3>Medication</h3>
+            <p id="medication"></p>
+        </div>
+
+        <div class="card">
+            <h3>Diet</h3>
+            <p id="diet"></p>
+        </div>
+
+        <div class="card">
+            <h3>Workout</h3>
+            <p id="workout"></p>
+        </div>
+    </div>
+
+    <div class="chatbot-box">
+        <h3>MediBot Chat Assistant</h3>
+        <p id="chatbot"></p>
+    </div>
+
+    
+</section>
+
+
+
+<div class="chat-icon" onclick="toggleChatbot()">💬</div>
+
+<div class="chat-icon" onclick="toggleChatbot()">💬</div>
+
+<div class="chat-window hidden" id="chatWindow">
+
+    <div class="chat-header">
+    <div class="chat-title">
+        💬 🤖 MediBot Assistant
+    </div>
+
+    <button onclick="toggleChatbot()">×</button>
+</div>
+
+    <div class="chat-body" id="chatBody">
+
+        <div class="bot-message">
+            👋 Welcome to MediBot.
+            <br><br>
+
+            I can help you understand possible diseases based on symptoms.
+
+            <br><br>
+
+            Please enter your symptoms and click Predict.
+
+            <br><br>
+
+            Example:
+            <br>
+            • fever, headache, body pain
+            <br>
+            • cough, sneezing, sore throat
+            <br>
+            • itching, skin rash
+        </div>
+
+    </div>
+
+    <button id="voiceControl"
+            class="voice-control"
+            onclick="toggleVoice()">
+        🔊
+    </button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
